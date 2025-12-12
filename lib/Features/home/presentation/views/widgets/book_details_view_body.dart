@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'books_action.dart';
 import 'books_details_sectioni.dart';
 import 'custom_book_details_app_bar.dart';
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
