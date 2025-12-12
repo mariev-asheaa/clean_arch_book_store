@@ -50,7 +50,9 @@ class VolumeInfo  {
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
     title: json['title'] as String,
-    authors: (json['authors'] as List<dynamic>?)?.cast<String>(),
+    authors: (json['authors'] as List<dynamic>?)
+        ?.map((author) => author.toString())
+        .toList(),
     publisher: json['publisher'] as String?,
     publishedDate: json['publishedDate'] as String?,
     description: json['description'] as String?,
