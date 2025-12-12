@@ -5,7 +5,7 @@ import '../../../../core/functions/save_books.dart';
 import '../../domain/entities/book_entity.dart';
 
 abstract class HomeRemoteDataSource{
-  Future<List<BookEntity>>fetchFeaturedBooks();
+  Future<List<BookEntity>>fetchFeaturedBooks({required int pageNumber});
   Future<List<BookEntity>>fetchNewestBooks();
 }
 
