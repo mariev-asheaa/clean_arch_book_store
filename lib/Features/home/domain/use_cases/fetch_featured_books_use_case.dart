@@ -13,7 +13,9 @@ class FetchFeaturedBooksUseCase extends UseCase{
   @override
   Future<Either<Failure, dynamic>> call([pageNumber=0]) async{
     //check user permission
-    return await homeRepo.fetchFeaturedBooks();
+    return await homeRepo.fetchFeaturedBooks(
+      pageNumber: pageNumber
+    );
   }
 
 }
