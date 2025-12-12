@@ -26,7 +26,7 @@ class HomeRemoteImplementation extends HomeRemoteDataSource{
 
   @override
   Future<List<BookEntity>> fetchNewestBooks() async {
-    var data=await apiService.get(endpoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=novels');
+    var data=await apiService.get(endpoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=stories');
     List<BookEntity>books=[];
     for(var book in data["items"]){
       books.add(BookModel.fromJson(book));
