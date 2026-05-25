@@ -5,15 +5,15 @@ import 'package:bookly/core/utils/api_service.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-final getIt=GetIt.instance;
-
-void serviceLocator(){
-  getIt.registerSingleton<ApiService>(ApiService(dio: Dio()));
-  getIt.registerSingleton<HomeRepoImplementation>(HomeRepoImplementation(
-      homeRemoteDataSource: HomeRemoteImplementation(
-        apiService: getIt.get<ApiService>(),
-      ),
-      homeLocalDataSource: HomeLocalImplementation(),
-  )
-  );
-}
+// final getIt=GetIt.instance;
+//
+// void serviceLocator(){
+//   getIt.registerSingleton<ApiService>(ApiService(dio: Dio()));
+//   getIt.registerSingleton<HomeRepoImplementation>(HomeRepoImplementation(
+//       homeRemoteDataSource: HomeRemoteImplementation(
+//         apiService: getIt.get<ApiService>(),
+//       ),
+//       homeLocalDataSource: HomeLocalImplementation(),
+//   )
+//   );
+// }

@@ -5,7 +5,9 @@ import 'package:bookly/Features/home/domain/repos/home_repo.dart';
 import 'package:bookly/core/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 
+@Injectable(as: HomeRepo)
 class HomeRepoImplementation extends HomeRepo{
   final HomeRemoteDataSource homeRemoteDataSource;
   final HomeLocalDataSource homeLocalDataSource;

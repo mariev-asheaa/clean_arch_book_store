@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class ApiService{
   final Dio dio;
   final String baseUrl='https://www.googleapis.com/books/v1/';

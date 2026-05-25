@@ -1,6 +1,7 @@
 import 'package:bookly/Features/home/data/models/book_model.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/api_service.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/functions/save_books.dart';
 import '../../domain/entities/book_entity.dart';
 
@@ -8,7 +9,7 @@ abstract class HomeRemoteDataSource{
   Future<List<BookEntity>>fetchFeaturedBooks({required int pageNumber});
   Future<List<BookEntity>>fetchNewestBooks();
 }
-
+@LazySingleton(as: HomeRemoteDataSource)
 class HomeRemoteImplementation extends HomeRemoteDataSource{
   final ApiService apiService;
   HomeRemoteImplementation({required this.apiService});

@@ -1,5 +1,6 @@
 import 'package:bookly/constants.dart';
 import 'package:hive/hive.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../domain/entities/book_entity.dart';
 
@@ -7,7 +8,7 @@ abstract class HomeLocalDataSource{
   List<BookEntity>fetchFeaturedBooks({int pageNumber = 0});
   List<BookEntity>fetchNewestBooks();
 }
-
+@LazySingleton(as: HomeLocalDataSource)
 class HomeLocalImplementation extends HomeLocalDataSource{
   @override
   List<BookEntity> fetchFeaturedBooks({int pageNumber = 0}) {

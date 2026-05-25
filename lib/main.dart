@@ -4,6 +4,7 @@ import 'package:bookly/Features/home/domain/use_cases/fetch_newest_books_use_cas
 import 'package:bookly/Features/home/presentation/cubits/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/Features/home/presentation/cubits/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly/constants.dart';
+import 'package:bookly/core/injection/injection.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +17,8 @@ import 'core/functions/service_locator.dart';
 
 void main() async {
   runApp(const Bookly());
-  serviceLocator();
+  //serviceLocator();
+  configureDependencies();
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox<BookEntity>(kFeaturedBooks);

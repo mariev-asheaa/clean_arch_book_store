@@ -1,10 +1,11 @@
 import 'package:bookly/Features/home/domain/repos/home_repo.dart';
 
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../../../core/errors/failure.dart';
 import '../../../../core/use_cases/use_case.dart';
-
+@injectable
 class FetchFeaturedBooksUseCase extends UseCase{
   final HomeRepo homeRepo;
 
